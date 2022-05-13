@@ -1,3 +1,3 @@
 # Hotel Aqui
-Site com foco no estudo HTML, CSS, JAVAS SCRIP, SWIPER JS, Python,
+Site com foco no estudo HTML, CSS, Js, SWIPER JS, Python,
 
