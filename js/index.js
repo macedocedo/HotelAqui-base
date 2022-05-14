@@ -11,7 +11,6 @@ listButton.addEventListener("click", async () => {
 })
 
 const ListTemplate = (hoteis) => {
-    // html = `<table style="width:100%; margin-top: 48px; text-align: left;">
     html = `<table class="table" style="color: var(--text-color); margin-top: 48px">
     <thead>
         <tr>
