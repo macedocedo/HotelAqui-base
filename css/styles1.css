@@ -9,10 +9,10 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 0%, 4%);
   --first-color-alt: hsl(304, 100%, 50%);
-  --title-color: hsl(0, 0%, 100%);
-  --text-color: hsl(0, 0%, 100%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 0%);
   --text-color-light: hsl(355, 4%, 55%);
-  --body-color: rgb(0, 0, 0);
+  --body-color: rgb(255, 255, 255);
   --container-color: #fff;
 
   /*========== Font and typography ==========*/
@@ -131,7 +131,7 @@ button {
 body.dark-theme {
   --title-color: hsl(355, 4%, 95%);
   --text-color: hsl(355, 4%, 75%);
-  --body-color: hsl(289, 49%, 29%);
+  --body-color: hsl(0, 0%, 9%);
   --container-color: hsl(0, 0%, 100%);
 }
 
@@ -175,12 +175,14 @@ body.dark-theme {
 }
 
 .main {
-  overflow: hidden;
+  margin-bottom: 32px;
+  overflow: auto;
+  height: calc(100vh - 83px);
 }
 
-.section {
+/* .section {
   padding: 3rem 0 1rem;
-}
+} */
 
 .section__title {
   font-size: var(--h2-font-size);
@@ -538,8 +540,14 @@ body.dark-theme {
 }
 
 .footer__container {
-  position: relative;
-  row-gap: 2rem;
+  margin: 16px 0 16px 0;
+  display: flex;
+  gap: 16px;
+  width: fit-content;
+}
+
+.footer__container span {
+  font-size: 0.75rem;
 }
 
 .footer__logo {
@@ -590,7 +598,7 @@ body.dark-theme {
 
 .footer__copy {
   display: block;
-  margin: 3.5rem 0 1rem 0;
+  /* margin: 3.5rem 0 1rem 0; */
   text-align: center;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
@@ -698,11 +706,6 @@ body.dark-theme {
   .message__button {
     width: 60%;
   }
-
-  .footer__container {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3rem 1rem;
-  }
 }
 
 @media screen and (min-width: 767px) {
@@ -762,10 +765,6 @@ body.dark-theme {
   .gift__container {
     grid-template-columns: repeat(5, 200px);
     gap: 2.5rem;
-  }
-
-  .footer__container {
-    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -849,14 +848,9 @@ body.dark-theme {
     width: 320px;
     justify-self: center;
   }
-
-  .footer__container {
-    grid-template-columns: repeat(5, max-content);
-    justify-content: space-between;
-  }
-  .footer__copy {
+  /* .footer__copy {
     margin-top: 7rem;
-  }
+  } */
   
   .scrollup {
     right: 3rem;
