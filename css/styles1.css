@@ -540,10 +540,11 @@ body.dark-theme {
 }
 
 .footer__container {
-  margin: 16px 0 16px 0;
+  margin: auto;
   display: flex;
   gap: 16px;
   width: fit-content;
+  padding: 16px;
 }
 
 .footer__container span {

@@ -19,22 +19,36 @@ const ListTemplate = (hoteis) => {
             <th scope="col">Estrelas</th>
             <th scope="col">Cidade</th>
             <th scope="col">Diária</th>
+            <th scope="col">Ações</th>
         </tr>
     </thead>
     <tbody>
     `
 
-    hoteis.forEach(hotel => {
+    hoteis.forEach((hotel, index) => {
         html += `
         <tr>
             <td> ${hotel.nome} </td>
             <td> ${hotel.estrelas} </td>
             <td> ${hotel.cidade} </td>
             <td> ${hotel.diaria} </td>
+            <td>
+                <button
+                    onClick="editHotel(${index})"
+                    class="btn btn-outline-primary"
+                    data-id="${index}"
+                >
+                    Editar
+                </button>
+            </td>
         </tr>`
     })
 
     html += '</tbody></table>'
 
     return html
+}
+
+const editHotel = (index) => {
+    console.log(index)
 }
