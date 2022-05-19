@@ -177,7 +177,8 @@ body.dark-theme {
 .main {
   margin-bottom: 32px;
   overflow: auto;
-  height: calc(100vh - 83px);
+  height: calc(100vh - 171px);
+  margin-top: 64px;
 }
 
 /* .section {
