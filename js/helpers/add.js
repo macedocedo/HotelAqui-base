@@ -21,6 +21,22 @@ const resetForm = () => {
     diariaInput.value = ""
 }
 
+const hotelModel = {
+    validate: hotel => {
+        if (!hotel.nome) throw new Error("Hotel nome required")
+        if (!hotel.estrelas) throw new Error("Hotel estrelas required")
+        if (!hotel.cidade) throw new Error("Hotel cidade required")
+        if (!hotel.diaria) throw new Error("Hotel diaria required")
+
+        return {
+            nome: hotel.nome,
+            estrelas: hotel.estrelas,
+            cidade: hotel.cidade,
+            diaria: hotel.diaria,
+        }
+    }
+}
+
 const saveHotel = async () => {
 
     const hotel = {
@@ -51,6 +67,15 @@ const saveHotel = async () => {
     } catch (error) {
         console.log(error)
     }
+}
 
+const addHotel = hotel => {
+    try {
+        const validHotel = hotelModel.validate(hotel)
+        hoteis.push(validHotel)
 
+        renderTable(hoteis)
+    } catch (error) {
+        console.log(error)
+    }
 }
